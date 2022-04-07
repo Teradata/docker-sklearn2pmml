@@ -9,6 +9,7 @@ on:
 env:
   PYTHON_VERSION: 3.9
   TERADATAML_VERSION: 17.0.0.4
+  SKLEARN2PMML_VERISON: 0.79.0
 
 jobs:
   docker:
@@ -33,4 +34,5 @@ jobs:
           build-args: |
             PYTHON_VERSION=${{ env.PYTHON_VERSION }}
             TERADATAML_VERSION=${{ env.TERADATAML_VERSION }}
+            SKLEARN2PMML_VERISON=${{ env.SKLEARN2PMML_VERISON }}
           tags: teradata/python-sklearn2pmml:latest, teradata/python-sklearn2pmml:${{ env.PYTHON_VERSION }}-${{ env.TERADATAML_VERSION }}
