@@ -6,6 +6,6 @@ A Docker image that extends the official Python image and adds `teradataml` and 
 The dockerfile is parametrized. You need to specify PYTHON_VERSION and TERADATAML_VERSION to build the image:
 
 ```
-docker build --build-arg PYTHON_VERSION=3.9 --build-arg TERADATAML_VERSION=17.0.0.4 -t teradata/python-sklearn2pmml:latest .
-podman build --build-arg PYTHON_VERSION=3.9 --build-arg TERADATAML_VERSION=17.0.0.4 -t teradata/python-sklearn2pmml:latest .
+docker build --build-arg PYTHON_VERSION=3.9 --build-arg TERADATAML_VERSION=17.0.0.4 --build-arg SKLEARN2PMML_VERISON=0.79.0 -t teradata/python-sklearn2pmml:latest .
+podman build --build-arg PYTHON_VERSION=3.9 --build-arg TERADATAML_VERSION=17.0.0.4 --build-arg SKLEARN2PMML_VERISON=0.79.0 -t teradata/python-sklearn2pmml:latest .
 ```
